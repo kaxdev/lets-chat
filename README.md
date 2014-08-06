@@ -1,10 +1,6 @@
-# **Let's Chat**
+# **Kat - Kax Chat**
 
-**Heads up:** All new work should be done in the release/0.3.0 branch: https://github.com/sdelements/lets-chat/pull/89
-
-A self-hosted chat app for small teams.
-
-![Screenshot](http://i.imgur.com/djnd0Uk.png)
+A self-hosted chat app for your team with an amazing flow.
 
 ## Features and Stuff
 
@@ -32,11 +28,11 @@ A self-hosted chat app for small teams.
 
 Install [nodejs](https://github.com/joyent/node/wiki/Installation) and [mongo](http://www.mongodb.org/display/DOCS/Quickstart)
 
-Clone le repo
+Clone the repo
 
 ```
-git clone https://github.com/sdelements/lets-chat.git
-cd lets-chat
+git clone https://github.com/kaxdev/kat.git
+cd kat
 ```
 
 Install node dependencies
@@ -45,10 +41,16 @@ Install node dependencies
 npm install
 ```
 
-Create a settings file (make sure to edit if you need to). 
+Create a settings file (make sure to edit if you need to).
 
 ```
 cp settings.js.sample settings.js
+```
+
+Optional/Additional: Run the mongodb if it's not running.
+
+```
+mongod --dbpath data/mongodb/
 ```
 
 Run the app
@@ -57,7 +59,7 @@ Run the app
 node app.js
 ```
 
-Party time: [http://localhost:5000](http://localhost:5000)
+Now the server is running on: [http://localhost:5000](http://localhost:5000)
 
 ## Deploying to Heroku
 
