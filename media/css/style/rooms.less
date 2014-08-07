@@ -6,8 +6,11 @@
     display: block;
     padding-top: 20px;
     h1 {
+        color:darken(@blue,20);
         font-size: 30px;
-        color: #f2f2f2;
+        font-family:"Exo 2";
+        font-weight:800;
+        font-style:italic;
         vertical-align: middle;
         margin: 0;
         display: inline-block;
@@ -16,12 +19,9 @@
         padding: 15px;
         margin: 20px;
         margin-top: 0;
-        border: 1px #333 solid;
         img {
             height: 20px;
         }
-        .border-radius(3px);
-        .box-shadow(0 0 7px #000);
     }
     .btn {
         float: right;
@@ -37,25 +37,28 @@
         margin: 0;
     }
     .room {
-        background: #222;
         width: 300px;
         padding: 10px;
         padding-bottom: 30px;
         margin: 5px;
-        border-top: 3px #777 solid;
         display: block;
         float: left;
         position: relative;
-        border-radius: 3px;
+        border-radius: 5px;
         .box-sizing(border-box);
-        .box-shadow(0 0 7px #000);
+        .box-shadow(0 0 7px lighten(@blue,35));
     }
     .name {
         font-size: 20px;
+        font-family:"Exo 2";
         line-height: 120%;
         margin-bottom: 5px;
         display: block;
         .text-overflow;
+    }
+    a.name:hover{
+      color:@blue;
+      text-decoration:none;
     }
     .description {
         line-height: 150%;

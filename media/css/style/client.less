@@ -55,6 +55,28 @@
         -ms-transform: translate3d(0,0,0);
         -o-transform: translate3d(0,0,0);
         transform: translate3d(0,0,0);
+        /* Let's get this party started */
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 2px @blue;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            background: @blue;
+            -webkit-box-shadow: inset 0 0 2px @blue;
+        }
+        &::-webkit-scrollbar-thumb:window-inactive {
+          background: @blue;
+        }
     }
     .entry {
         .box-flex(0);
@@ -73,7 +95,7 @@
  *********************/
 
 .entry {
-    background: #fff url('../img/grid_noise.png');
+    background: @blue url('../img/grid_noise.png');
     padding: 10px;
     border-top: 1px #ccc solid;
     border-radius: 0 0 4px 4px;
@@ -102,13 +124,13 @@
     width: 20%;
     max-width: 230px;
     min-width: 150px;
-    color: #ccc;
+    color: #FFF;
     margin: 20px;
     margin-left: 5px;
     position: relative;
     z-index: 999;
     p, h1 {
-        color: #fff;
+        color: @blue;
         word-wrap: break-word;
     }
     h1 {
@@ -119,15 +141,13 @@
     }
     .item-list {
         margin-top: 10px;
-        border: 1px #444 solid;
-        border-radius: 5px;
         h3 {
             font-size: 14px;
             font-weight: normal;
             line-height: 28px;
         }
         .top {
-            background: #222 url('../img/header.png') repeat-x;
+            background: @blue;
             padding: 3px 5px;
             h3 {
                 display: inline;
@@ -139,19 +159,16 @@
         }
         ul {
             max-height: 170px;
-            background: #f2f2f2;
-            color: #555;
+            color: #333;
             padding: 0;
             margin: 0;
             overflow-y: auto;
             border-radius: 5px;
         }
         li {
-            #gradient > .vertical(#fff, #e9e9e9);
+            background: white;
             padding: 5px;
             display: block;
-            border-top: 1px #ddd solid;
-            border-bottom: 1px #eee solid;
             word-wrap: break-word;
             .clearfix;
             &:last-child {
@@ -223,8 +240,7 @@
         height: 24px;
     }
     .upload {
-        background: #222;
-        border-top: 1px #000 solid;
+        background: white;
     }
     form {
         padding: 5px;
@@ -272,7 +288,7 @@
 }
 
 #connection-status p {
-  color: #fff;
+  color: @blue;
   margin-top:42px;
 }
 
@@ -311,8 +327,8 @@
   width: 70px;
   height: 70px;
   border-style: solid;
-  border-top-color: #FFF;
-  border-right-color: #FFF;
+  border-top-color: @blue;
+  border-right-color: @blue;
   border-left-color: transparent;
   border-bottom-color: transparent;
   border-radius: 50%;
@@ -345,7 +361,7 @@
 }
 
 .signal {
-    border:3px solid #fff;
+    border:3px solid rgba(red(@blue), green(@blue), blue(@blue), 0.5);
     border-radius:30px;
     height:30px;
     left:50%;

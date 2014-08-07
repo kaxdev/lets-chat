@@ -39,6 +39,10 @@
                 <li class="fixed tab" data-id="home">
                     <a href="#!/" class="home" data-id="home" title="Rooms"><i class="icon-th icon-white"></i></a>
                 </li>
+                <li class="fixed tab" data-id="create">
+                    <a data-toggle="modal" href="#create-room" class="btn btn-info">
+                    <i class="icon-plus icon-white"></i></a>
+                </li>
             </ul>
         </div>
         <div class="user dropdown pull-right">
@@ -59,7 +63,7 @@
     <div id="panes" class="views">
         <div id="room-list" data-id="home" class="view" style="display: none;">
             <div class="top">
-                <h1><img src="{{ media_url }}/img/rooms.png" alt="Rooms"></h1>
+                <h1>Rooms</h1>
                 <a data-toggle="modal" href="#create-room" class="btn btn-info">
                     <i class="icon-plus icon-white"></i> Create Room
                 </a>
