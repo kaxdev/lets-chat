@@ -885,16 +885,16 @@ var ClientView = Backbone.View.extend({
         // Connection Events
         //
         this.notifications.on('connect', function() {
-            self.$('.connection-status')
+            self.$('#connection-status')
                 .removeClass('disconnected')
                 .addClass('connected')
-                .html('<i class="icon-refresh"></i>  connected');
+                .html('<span class="signal"></span>  connected');
         });
         this.notifications.on('disconnect', function() {
-            self.$('.connection-status')
+            self.$('#connection-status')
               .removeClass('connected')
               .addClass('disconnected')
-              .html('<i class="icon-warning-sign"></i> disconnected');
+              .html('<i class="icon-unlink"></i> disconnected');
         });
         //
         // Room events
