@@ -5370,6 +5370,15 @@ header .user .dropdown-menu a:hover {
   width: 50px;
   height: 50px;
 }
+.youtube span,
+.youtube a {
+  height: 100%;
+  display: inline-block;
+}
+.youtube i {
+  font-size: 20px;
+  color: #e52d27;
+}
 /*********************
  * Tabs
  *********************/
